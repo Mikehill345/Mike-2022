@@ -1,13 +1,18 @@
 
-To Start the server in the command line it's npm run server I built this using mongoDB 
+**__To Start the server in the command line it's npm run server I built this using mongoDB__**
 
-to check to see if the server is live it will display in the terminal or if you go to http://localhost:5000/built
+**__to check to see if the server is live it will display in the terminal or if you go to http://localhost:5000/built__**
 
-to set a New Key to the Mongo Server use the endpoint 
+**__to set a New Key to the Mongo Server use the endpoint__**
 
-http://localhost:5000/api/newKey
+`http://localhost:5000/api/newKey`
 
-send in the body
+
+###### Request Body #######
+
+- Required Fields
+
+```
 {
 	"publicKey":"Key",
 	"privateKey":"private",
@@ -15,8 +20,12 @@ send in the body
 	"sign":"xxxx",
 	"password":"password"
 }
+```
 
-the response will be 
+
+###### Returns ######
+
+```
 {
 	"message": "Wow, it saved",
 	"client": {
@@ -31,24 +40,63 @@ the response will be
 		"__v": 0
 	}
 }
+```
 
 
-to send the public key and the password  the endpoint will be 
-http://localhost:5000/api/publicKeySearch
 
-in the body 
+`http://localhost:5000/api/publicKeySearch`
 
+
+###### Request Body #######
+
+- Required Fields
+
+
+```
 {
 	"password":"PASSWORD",
 "publicKey": "-----BEGIN PUBLIC KEY-----\r\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC99qbr5G7A1jt2k3cn/QvKTwO6\r\natiXUHypZ05Kizfto3us354cfBhJA0qPFu9h7AZloSutdLtno3lCideIDwZwqKAl\r\nPQBjcWzZWvhKzrj01kRO31Rhp1met7RXsXyPPPMfVkSRUd8uG7tmOVzm5jFDTiR4\r\n49saoSoqFlHOnArSMwIDAQAB\r\n-----END PUBLIC KEY-----"
 }
+```
 
-response will be 
+##### Returns ######
 
+```
 {
 	"message": "Success!"
 }
 
-in the console the response will be 
+```
 
+
+##### Console Response ######
+
+ ```
 { message: 'This is a cool message', signature: 'mike' }
+
+```
+
+
+`http://localhost:5000/api/findSignature`
+
+###### Request Body #####
+
+- Required Fields
+
+```
+{
+	"sign":"xxxx"
+}
+```
+
+##### Returns ######
+
+```
+{
+	"message": "verified"
+}
+```
+
+##### Console Returns #####
+
+`Verified`
