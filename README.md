@@ -1,12 +1,13 @@
 
 **__To Start the server in the command line it's npm run server I built this using mongoDB__**
 
-**__to check to see if the server is live it will display in the terminal or if you go to http://localhost:5000/built__**
+**__to check to see if the server is live it will display in the terminal or if you go to http://localhost:5000/__**
 
 **__to set a New Key to the Mongo Server use the endpoint__**
 
-`http://localhost:5000/api/newKey`
+### POST Request to `http://localhost:5000/api/newKey`
 
+This post request will save the keys to the database along with the password and the signature this also hashs and salts the password to be saved in the database
 
 ###### Request Body #######
 
@@ -44,8 +45,9 @@
 
 
 
-`http://localhost:5000/api/publicKeySearch`
+#### POST Request `http://localhost:5000/api/publicKeySearch`
 
+This post request will sent the public key over to the database along with the password and verify the password which allows it to post the message and the signature to the console.
 
 ###### Request Body #######
 
@@ -77,7 +79,9 @@
 ```
 
 
-`http://localhost:5000/api/findSignature`
+####POST Request `http://localhost:5000/api/findSignature`
+
+This post request allows anyone to send the signature over to veryify if it's the original signature and returns whether or not it is correct and verified.
 
 ###### Request Body #####
 
