@@ -45,7 +45,7 @@ This post request will save the keys to the database along with the password and
 
 
 
-#### POST Request `http://localhost:5000/api/publicKeySearch`
+### POST Request `http://localhost:5000/api/publicKeySearch`
 
 This post request will sent the public key over to the database along with the password and verify the password which allows it to post the message and the signature to the console.
 
@@ -79,7 +79,7 @@ This post request will sent the public key over to the database along with the p
 ```
 
 
-####POST Request `http://localhost:5000/api/findSignature`
+### POST Request `http://localhost:5000/api/findSignature`
 
 This post request allows anyone to send the signature over to veryify if it's the original signature and returns whether or not it is correct and verified.
 
