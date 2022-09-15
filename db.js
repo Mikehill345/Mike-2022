@@ -4,7 +4,6 @@ require('colors')
 const connectDB = async () => {
     try {
         await mongoose.connect(`mongodb://127.0.0.1:27017/testDB`, {
-        // await mongoose.connect(`mongodb://localhost:27017/golfdb`, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });

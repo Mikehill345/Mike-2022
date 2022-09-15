@@ -3,7 +3,7 @@ const express = require('express')
 const connectDB = require('./db')
 const dotenv = require('dotenv')
 
-const clientRouter = require('./routes/auth')
+const clientRouter = require('./routes/client')
 
 
 
